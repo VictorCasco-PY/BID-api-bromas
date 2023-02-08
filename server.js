@@ -6,4 +6,7 @@ require("./server/config/mongoose.config");
 
 app.use(express.json(), express.urlencoded({ extended: true }));
 
+const AllMyJokeRoutes = require("./server/routes/joke.routes");
+AllMyJokeRoutes(app);
+
 app.listen(port, () => console.log(`Connect on port: ${port}`));
